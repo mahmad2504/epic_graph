@@ -7,9 +7,10 @@ import json
 import os
 import base64
 import sys
+
 class Jira:
     def __init__(self,fields=["key"],expand=[],jiraurl=None,jirauser=None,jiratoken=None):
-        os.system('color')
+       
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning) 
         if jiraurl==None:   
             file_name='settings.json'

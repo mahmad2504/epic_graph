@@ -9,6 +9,7 @@ from Jira import Jira
 from datetime import  datetime, timedelta
 import sys
 import math
+import platform
 
 import numpy as np
 import pandas as pd
@@ -28,6 +29,8 @@ import plotly.graph_objects as plotly
 import plotly.express as px
 
 
+if "Windows"==platform.system():
+    os.system('color')
 
 if len(sys.argv)!=2:
     print(colored("The syntax of the command is incorrect", 'red'))
