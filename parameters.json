@@ -1,1 +1,1 @@
-{"image_name": "epic_graph", "branch": "main", "docker_registry": "harbor.xcr.svcs01eu.prod.eu-central-1.kaas.sws.siemens.com/eps", "code_repository": "https://github.com/mahmad2504/epic_graph.git", "commit": "214b93600fe8a3742340f081728321b10256b866"}
+{"image_name": "epic_graph", "branch": "main", "docker_registry": "harbor.xcr.svcs01eu.prod.eu-central-1.kaas.sws.siemens.com/eps", "code_repository": "https://github.com/mahmad2504/epic_graph.git", "commit": "f8fa1610cbf451f7dfa0e561986f836bcb441d48"}

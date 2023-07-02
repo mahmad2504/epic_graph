@@ -145,7 +145,7 @@ if args.target == 'generate':
                     mprint(cmd)
                     os.system(cmd)
             else:
-                cmd=f'docker run -it --rm -w /src  {docker_registry}/{image_name}:latest python3 main.py "{args.epic}"'
+                cmd=f'docker run -it --rm -w /src -v {os.getcwd()}:/app {docker_registry}/{image_name}:latest python3 main.py "{args.epic}"'
                 mprint(cmd)
                 os.system(cmd)
         else:

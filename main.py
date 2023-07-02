@@ -73,7 +73,7 @@ def DrawBarChart(x,y1,y2):
     myFigure.update_yaxes(automargin=False)
     #myFigure.show()
     print("Graph saved as graph.html")
-    myFigure.write_html("graph.html")
+    myFigure.write_html("/app/graph.html")
 
 
 
