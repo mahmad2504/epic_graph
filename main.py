@@ -69,7 +69,9 @@ def DrawBarChart(x,y1,y2):
         )
     )
     myFigure.update_yaxes(automargin=False)
-    myFigure.show()
+    #myFigure.show()
+    print("Graph saved as graph.html")
+    myFigure.write_html("graph.html")
 
 
 
@@ -81,6 +83,7 @@ expand=["changelog"]
 #project_id=12397
 
 j=Jira(jiraurl="https://jira.alm.mentorg.com",jirauser="aGltcA==",jiratoken="aG1pcA==")
+
 
 ids=[]
 data1 = []
@@ -101,14 +104,14 @@ for issue in issues:
         data1.append(timelog)
         data2.append(issue['fields']['customfield_10022'])
         
-        print(issue['key'],issue['fields']['customfield_10022'],math.ceil(timelog))
+        #print(issue['key'],issue['fields']['customfield_10022'],math.ceil(timelog))
 
 x=["Moranp", "Turquoise", "Cornflower", "Raddles","fff"]
 y1=[6, 4, 5, 11,9]
 y2=[6, 4, 5, 11,9]
 
 DrawBarChart(ids,data1,data2)
-    
+ 
     
 exit()
 

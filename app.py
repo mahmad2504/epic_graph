@@ -135,17 +135,17 @@ if args.target == 'version':
         print(f'Branch:{branch}')
             
 if args.target == 'generate':
-        if args.sprint and args.board:
+        if args.epic:
             if args.dev:
                 if source_code==0:
                     mprint("Source code not available. Unable to run this command",1)
                     sys.exit()
                 else:
-                    cmd=f'docker run -it --rm -w /app -v {os.getcwd()}:/app {image_name}:latest python3 main.py "{args.sprint}" {args.board}'
+                    cmd=f'docker run -it --rm -w /app -v {os.getcwd()}:/app {image_name}:latest python3 main.py "{args.epic}"'
                     mprint(cmd)
                     os.system(cmd)
             else:
-                cmd=f'docker run -it --rm -w /src  {docker_registry}/{image_name}:latest python3 main.py "{args.sprint}" {args.board}'
+                cmd=f'docker run -it --rm -w /src  {docker_registry}/{image_name}:latest python3 main.py "{args.epic}"'
                 mprint(cmd)
                 os.system(cmd)
         else:
