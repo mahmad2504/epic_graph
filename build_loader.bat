@@ -1,2 +1,2 @@
-python -m PyInstaller main.py --onefile --name epic_graph
+python -m PyInstaller app.py --onefile --name epic_graph
 copy dist\epic_graph.exe .
