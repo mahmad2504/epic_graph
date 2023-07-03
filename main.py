@@ -93,6 +93,7 @@ data2 = []
 data3 = []
 issues=j.Search(f" 'Epic Link' ={epic}",fields=fields,expand=[])
 for issue in issues:
+   
     
     if 'timeSpentSeconds' not in issue['fields']['timetracking']:
         issue['fields']['timetracking']['timeSpentSeconds']=0
@@ -100,8 +101,11 @@ for issue in issues:
         issue['fields']['customfield_10022']=0
         
     if issue['fields']['customfield_10022']>0 or issue['fields']['timetracking']['timeSpentSeconds']>0:
-        timelog=issue['fields']['timetracking']['timeSpentSeconds']/(60*60*24)
-        timelog=math.ceil(timelog)
+         
+        timelog=issue['fields']['timetracking']['timeSpentSeconds']/(60*60*8)
+        #if('NUC4-19620'==issue['key']):
+        #    print(round(timelog,1))
+        timelog=round(timelog,1)
         ids.append(issue['key'])
         data1.append(timelog)
         data2.append(issue['fields']['customfield_10022'])
